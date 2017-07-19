@@ -1,3 +1,4 @@
+'use strict';
 module.exports = {
     aws: {
         access: {
@@ -11,5 +12,8 @@ module.exports = {
         sqs: {
             url: process.env.AWS_ACCESS_URL
         }
+    },
+    log: {
+        level: process.env.LOG_LEVEL || 'error'
     }
 };

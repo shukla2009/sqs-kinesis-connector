@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/shukla2009/sqs-kinesis-connector#readme",
   "dependencies": {
-    "aws-sdk": "^2.86.0"
+    "aws-sdk": "^2.86.0",
+    "winston": "^2.3.1"
   }
 }
