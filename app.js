@@ -12,7 +12,7 @@ AWS.config.update({
 
 var paramsSQS = {
     QueueUrl: config.aws.sqs.url,
-    MaxNumberOfMessages: 10,
+    MaxNumberOfMessages: config.aws.sqs.maxMessge,
     VisibilityTimeout: 60
 };
 
@@ -75,7 +75,7 @@ function process() {
                     }
                 }
             }
-            setTimeout(process, 1000);
+            setTimeout(process, config.aws.sqs.refreshTime);
         }
     );
 }

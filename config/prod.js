@@ -10,7 +10,9 @@ module.exports = {
             stream: process.env.AWS_KINESIS_STREAM
         },
         sqs: {
-            url: process.env.AWS_SQS_URL
+            url: process.env.AWS_SQS_URL,
+            maxMessge: process.env.AWS_SQS_MAX_MESSAGE || 10,
+            refreshTime: process.env.AWS_SQS_REFRESH_TIME || 10000
         }
     },
     log: {
